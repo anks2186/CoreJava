@@ -1,0 +1,7 @@
+package org.ankit;
+public class S{
+	public static class o{
+		public void p(String s){
+			System.out.println(s);
+	}	}
+}

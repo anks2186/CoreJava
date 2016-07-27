@@ -1,0 +1,8 @@
+public class StringEx{
+	public static void main(String args[]){
+		String s1 = "BITS edu campus";
+		int len = s1.length();
+		System.out.print("length of "+ s1  + " is:" + len);
+		String s2 = s1.substring(len/2,len);
+	}
+}

@@ -1,0 +1,76 @@
+1.
+
+can't change signature -> arg list + name
+
+we can change access modifiers and return type based on rules bellow. 
+
+2.
+
+can not go from less restrictive to more restrictive 
+
+private - most restrictive
+default
+protected 
+public - least restrictive 
+
+
+3. 
+
+We can change return type: subclass obj can be returned in overridden method.
+
+e.g. 
+
+class Emp{
+	public Car getDetail(){
+		return new Car();
+	}
+}
+
+class Manager extends Emp{
+	public BMW getDetail(){
+		return new BMW();
+	}
+}
+
+class Car{
+
+}
+
+class BMW extends Car{
+
+}
+
+Object o1 = new Object(); //o1->1000x
+Object o2 = new Object(); //o2->2000x
+o1.equals(o2); // false
+Object o3 = o1; //o3->1000x
+o3.equals(o1); //true
+
+
+public boolean equals(Object o){
+	return this == o;
+}
+
+
+
+String s1 = new String("BITS");//s1->3000x
+String s2 = new String("bits");//s2->4000x
+
+
+S.o.p(s1.equals(s2));//false
+
+
+Student s1 = new Student("A",1);
+Student s2 = new Student("A",1);
+
+s1.equals(s2);//
+
+
+Signature: method's name + arg list
+
+
+prototype: access modifier + return type + name + arg list
+
+
+
+

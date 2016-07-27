@@ -1,0 +1,12 @@
+package org.desai;
+
+import org.desai.o;
+
+public class S{
+	
+	public static O o;
+	static{
+		o = new O();
+	}
+
+}

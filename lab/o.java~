@@ -1,0 +1,6 @@
+	package org.desai;
+	public class o{
+		public static void p(String s){
+			System.out.println(s);
+		}
+	}

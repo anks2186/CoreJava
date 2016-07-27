@@ -1,0 +1,14 @@
+Employee e1 = new Employee();
+e1.getDetails();
+
+//compile time poly.
+
+Employee e2 = new Manager();
+e2.getDetails();
+
+e2 = new Peon();
+e2.getDetails();
+
+//run time polymorphisum 
+
+Object o1 = new Employee();
