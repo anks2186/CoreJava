@@ -1,0 +1,44 @@
+public class Sample{
+	private Integer i1 = new Integer(400);
+	
+	public static void main(String args[]){
+		Sample s1 = new Sample();
+		Sample s2 = new Sample();
+		Sample s3 = modify(s2);
+		s1 = null;
+
+		//here how many objects are eligible for garbage collection
+		//Draw HEAP STACK diagram for the same
+	}
+
+	public static Sample modify(Sample s){
+		s.i1 = new Integer(9);
+		s = new Sample();
+		s.i1 = new Integer(20);
+		s = null;
+		return s;
+	}
+}
+
+
+HEAP
+====
+1000x: SampleObj: IntegerObj: i1=2000x
+2000x: IntegerObj: (400)
+3000x: SampleObj: IntegerObj i1=5000x
+4000x: IntegerObj: (400)
+5000x: IntergerObj: (9)
+6000x: SampleObj: IntegerObj i1=8000x
+7000x: IntegerObj: (400)
+8000x: IntegerObj: (20)
+
+STACK
+=====
+Main_Stack
+----------
+args=null
+s1=1000x
+s2=3000x
+s3=null
+
+
